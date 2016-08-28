@@ -9,7 +9,7 @@
     <appender name="ROLLING"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
         <Encoding>UTF-8</Encoding>
-        <File>log/spring-jpetstore.log</File>
+        <File>D:/logs/jpetstore/spring-jpetstore.log</File>
         <rollingPolicy
             class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <FileNamePattern>log/spring-petstore-%d{yyyyMMdd}.log
@@ -25,27 +25,32 @@
     <!-- Application Loggers -->
     <logger name="ik.am.jpetstore">
         <level value="debug" />
+        <appender-ref ref="ROLLING" />
     </logger>
 
     <!-- 3rdparty Loggers -->
     <logger name="org.springframework.core">
-        <level value="warn" />
+        <level value="debug" />
+        <appender-ref ref="ROLLING" />
     </logger>
 
     <logger name="org.springframework.beans">
-        <level value="warn" />
+        <level value="debug" />
+        <appender-ref ref="ROLLING" />
     </logger>
 
     <logger name="org.springframework.context">
-        <level value="warn" />
+        <level value="debug" />
+        <appender-ref ref="ROLLING" />
     </logger>
 
     <logger name="org.springframework.web">
-        <level value="warn" />
+        <level value="debug" />
+        <appender-ref ref="ROLLING" />
     </logger>
 
     <logger name="org.springframework.web.servlet">
-        <level value="info" />
+        <level value="debug" />
     </logger>
 
     <logger
