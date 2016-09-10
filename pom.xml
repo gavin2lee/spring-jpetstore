@@ -6,6 +6,88 @@
 	<artifactId>spring-jpetstore</artifactId>
 	<packaging>war</packaging>
 	<version>1.0.0</version>
+	<properties>
+		<!-- == Google == -->
+		<com.google.guava.version>14.0.1</com.google.guava.version>
+		<!-- == Apache Commons == -->
+		<commons-beanutils.version>1.8.3</commons-beanutils.version>
+		<commons-collections.version>3.2.1</commons-collections.version>
+		<commons-dbcp.version>1.2.2</commons-dbcp.version>
+		<commons-pool.version>1.6</commons-pool.version>
+		<commons-io.version>2.4</commons-io.version>
+		<commons-lang.version>3.1</commons-lang.version>
+		<!-- == Dozer== -->
+		<dozer.version>5.4.0</dozer.version>
+		<!-- == Joda-Time == -->
+		<joda-time.version>2.2</joda-time.version>
+		<joda-time.joda-time-jsptags.version>1.1.1</joda-time.joda-time-jsptags.version>
+		<jadira-usertype-core.version>3.0.0.GA</jadira-usertype-core.version>
+		<!-- == AspectJ == -->
+		<org.aspectj-version>1.7.2</org.aspectj-version>
+		<!-- == Jackson == -->
+		<org.codehaus.jackson.version>1.9.7</org.codehaus.jackson.version>
+		<!-- == JPA == -->
+		<org.hibernate.javax.persistence.version>1.0.1.Final</org.hibernate.javax.persistence.version>
+		<org.hibernate.version>4.2.2.Final</org.hibernate.version>
+		<!-- == BeanValidation == -->
+		<javax.validation.version>1.0.0.Final</javax.validation.version>
+		<org.hibernate.hibernate-validator.version>4.3.1.Final</org.hibernate.hibernate-validator.version>
+		<!-- == Logging == -->
+		<org.slf4j-version>1.7.5</org.slf4j-version>
+		<ch.qos.logback.version>1.0.13</ch.qos.logback.version>
+		<org.lazyluke.version>0.2.6</org.lazyluke.version>
+		<!-- == Spring Framework == -->
+		<org.springframework-version>4.3.2.RELEASE</org.springframework-version>
+		<org.springframework.data.spring-data-jpa.version>1.3.1.RELEASE</org.springframework.data.spring-data-jpa.version>
+		<org.springframework.data.version>1.5.1.RELEASE</org.springframework.data.version>
+		<org.springframework.security.version>3.1.4.RELEASE</org.springframework.security.version>
+		<!-- == Tiles == -->
+		<org.apache.tiles.version>2.2.2</org.apache.tiles.version>
+		<!-- == Amateras == -->
+		<jp.sf.amateras.functions.version>1.1.2</jp.sf.amateras.functions.version>
+		<!-- == JavaEE/SE APIs == -->
+		<javax.inject.version>1</javax.inject.version>
+		<javax.servlet.jstl.version>1.2</javax.servlet.jstl.version>
+		<javax.transaction.version>1.1</javax.transaction.version>
+		<tomcat.api.version>7.0.40</tomcat.api.version>
+		<!-- == database == -->
+		<com.h2database.version>1.3.156</com.h2database.version>
+		<!-- == JUnit == -->
+		<junit.version>4.10</junit.version>
+		<org.mockito.version>1.9.0</org.mockito.version>
+		<selenium.version>2.32.0</selenium.version>
+		<!-- == Maven Plugins == -->
+		<maven-eclipse-plugin.version>2.6</maven-eclipse-plugin.version>
+		<maven-jxr-plugin.version>2.3</maven-jxr-plugin.version>
+		<net.sourceforge.nekohtml.version>1.9.15</net.sourceforge.nekohtml.version>
+		<org.apache.maven.archetype.version>2.2</org.apache.maven.archetype.version>
+		<org.apache.maven.plugins.maven-checkstyle-plugin.version>2.9.1</org.apache.maven.plugins.maven-checkstyle-plugin.version>
+		<org.apache.maven.plugins.maven-compiler-plugin.version>2.5.1</org.apache.maven.plugins.maven-compiler-plugin.version>
+		<org.apache.maven.plugins.maven-dependency-plugin.version>2.5</org.apache.maven.plugins.maven-dependency-plugin.version>
+		<org.apache.maven.plugins.maven-javadoc-plugin.version>2.8.1</org.apache.maven.plugins.maven-javadoc-plugin.version>
+		<org.apache.maven.plugins.maven-project-info-reports-plugin.version>2.5.1</org.apache.maven.plugins.maven-project-info-reports-plugin.version>
+		<org.apache.maven.plugins.maven-resources-plugin.version>2.6</org.apache.maven.plugins.maven-resources-plugin.version>
+		<org.apache.maven.plugins.maven-site-plugin.version>3.1</org.apache.maven.plugins.maven-site-plugin.version>
+		<org.apache.maven.plugins.maven-source-plugin.version>2.2</org.apache.maven.plugins.maven-source-plugin.version>
+		<org.apache.maven.plugins.maven-surefire-report-plugin.version>2.4.3</org.apache.maven.plugins.maven-surefire-report-plugin.version>
+		<org.apache.maven.plugins.maven-war-plugin.version>2.2</org.apache.maven.plugins.maven-war-plugin.version>
+		<org.apache.maven.plugins.version>2.5</org.apache.maven.plugins.version>
+		<org.apache.maven.plugins.version>2.9</org.apache.maven.plugins.version>
+		<org.apache.maven.wagon.version>1.0-beta-7</org.apache.maven.wagon.version>
+		<org.apache.tomcat.maven.version>2.1</org.apache.tomcat.maven.version>
+		<org.codehaus.mojo.emma-maven-plugin.version>1.0-alpha-3</org.codehaus.mojo.emma-maven-plugin.version>
+		<org.codehaus.mojo.version>2.5</org.codehaus.mojo.version>
+		<!-- == Other Properties== -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<archetype.test.skip>true</archetype.test.skip>
+		<com.google.code.findbugs.version>1.3.9</com.google.code.findbugs.version>
+		<com.google.code.maven-license-plugin.version>1.4.0</com.google.code.maven-license-plugin.version>
+		<encoding>UTF-8</encoding>
+		<java-version>1.8</java-version>
+		<spring.spring-web.version>4.3.2.gl.beta</spring.spring-web.version>
+		<cxf.version>3.1.7</cxf.version>
+	</properties>
+	
 	<build>
 		<pluginManagement>
 			<plugins>
@@ -715,88 +797,27 @@
 		</dependency>
 		<!-- == End Tomcat == -->
 
-	</dependencies>
-	<properties>
-		<!-- == Google == -->
-		<com.google.guava.version>14.0.1</com.google.guava.version>
-		<!-- == Apache Commons == -->
-		<commons-beanutils.version>1.8.3</commons-beanutils.version>
-		<commons-collections.version>3.2.1</commons-collections.version>
-		<commons-dbcp.version>1.2.2</commons-dbcp.version>
-		<commons-pool.version>1.6</commons-pool.version>
-		<commons-io.version>2.4</commons-io.version>
-		<commons-lang.version>3.1</commons-lang.version>
-		<!-- == Dozer== -->
-		<dozer.version>5.4.0</dozer.version>
-		<!-- == Joda-Time == -->
-		<joda-time.version>2.2</joda-time.version>
-		<joda-time.joda-time-jsptags.version>1.1.1</joda-time.joda-time-jsptags.version>
-		<jadira-usertype-core.version>3.0.0.GA</jadira-usertype-core.version>
-		<!-- == AspectJ == -->
-		<org.aspectj-version>1.7.2</org.aspectj-version>
-		<!-- == Jackson == -->
-		<org.codehaus.jackson.version>1.9.7</org.codehaus.jackson.version>
-		<!-- == JPA == -->
-		<org.hibernate.javax.persistence.version>1.0.1.Final</org.hibernate.javax.persistence.version>
-		<org.hibernate.version>4.2.2.Final</org.hibernate.version>
-		<!-- == BeanValidation == -->
-		<javax.validation.version>1.0.0.Final</javax.validation.version>
-		<org.hibernate.hibernate-validator.version>4.3.1.Final</org.hibernate.hibernate-validator.version>
-		<!-- == Logging == -->
-		<org.slf4j-version>1.7.5</org.slf4j-version>
-		<ch.qos.logback.version>1.0.13</ch.qos.logback.version>
-		<org.lazyluke.version>0.2.6</org.lazyluke.version>
-		<!-- == Spring Framework == -->
-		<org.springframework-version>4.3.2.RELEASE</org.springframework-version>
-		<org.springframework.data.spring-data-jpa.version>1.3.1.RELEASE</org.springframework.data.spring-data-jpa.version>
-		<org.springframework.data.version>1.5.1.RELEASE</org.springframework.data.version>
-		<org.springframework.security.version>3.1.4.RELEASE</org.springframework.security.version>
-		<!-- == Tiles == -->
-		<org.apache.tiles.version>2.2.2</org.apache.tiles.version>
-		<!-- == Amateras == -->
-		<jp.sf.amateras.functions.version>1.1.2</jp.sf.amateras.functions.version>
-		<!-- == JavaEE/SE APIs == -->
-		<javax.inject.version>1</javax.inject.version>
-		<javax.servlet.jstl.version>1.2</javax.servlet.jstl.version>
-		<javax.transaction.version>1.1</javax.transaction.version>
-		<tomcat.api.version>7.0.40</tomcat.api.version>
-		<!-- == database == -->
-		<com.h2database.version>1.3.156</com.h2database.version>
-		<!-- == JUnit == -->
-		<junit.version>4.10</junit.version>
-		<org.mockito.version>1.9.0</org.mockito.version>
-		<selenium.version>2.32.0</selenium.version>
-		<!-- == Maven Plugins == -->
-		<maven-eclipse-plugin.version>2.6</maven-eclipse-plugin.version>
-		<maven-jxr-plugin.version>2.3</maven-jxr-plugin.version>
-		<net.sourceforge.nekohtml.version>1.9.15</net.sourceforge.nekohtml.version>
-		<org.apache.maven.archetype.version>2.2</org.apache.maven.archetype.version>
-		<org.apache.maven.plugins.maven-checkstyle-plugin.version>2.9.1</org.apache.maven.plugins.maven-checkstyle-plugin.version>
-		<org.apache.maven.plugins.maven-compiler-plugin.version>2.5.1</org.apache.maven.plugins.maven-compiler-plugin.version>
-		<org.apache.maven.plugins.maven-dependency-plugin.version>2.5</org.apache.maven.plugins.maven-dependency-plugin.version>
-		<org.apache.maven.plugins.maven-javadoc-plugin.version>2.8.1</org.apache.maven.plugins.maven-javadoc-plugin.version>
-		<org.apache.maven.plugins.maven-project-info-reports-plugin.version>2.5.1</org.apache.maven.plugins.maven-project-info-reports-plugin.version>
-		<org.apache.maven.plugins.maven-resources-plugin.version>2.6</org.apache.maven.plugins.maven-resources-plugin.version>
-		<org.apache.maven.plugins.maven-site-plugin.version>3.1</org.apache.maven.plugins.maven-site-plugin.version>
-		<org.apache.maven.plugins.maven-source-plugin.version>2.2</org.apache.maven.plugins.maven-source-plugin.version>
-		<org.apache.maven.plugins.maven-surefire-report-plugin.version>2.4.3</org.apache.maven.plugins.maven-surefire-report-plugin.version>
-		<org.apache.maven.plugins.maven-war-plugin.version>2.2</org.apache.maven.plugins.maven-war-plugin.version>
-		<org.apache.maven.plugins.version>2.5</org.apache.maven.plugins.version>
-		<org.apache.maven.plugins.version>2.9</org.apache.maven.plugins.version>
-		<org.apache.maven.wagon.version>1.0-beta-7</org.apache.maven.wagon.version>
-		<org.apache.tomcat.maven.version>2.1</org.apache.tomcat.maven.version>
-		<org.codehaus.mojo.emma-maven-plugin.version>1.0-alpha-3</org.codehaus.mojo.emma-maven-plugin.version>
-		<org.codehaus.mojo.version>2.5</org.codehaus.mojo.version>
-		<!-- == Other Properties== -->
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<archetype.test.skip>true</archetype.test.skip>
-		<com.google.code.findbugs.version>1.3.9</com.google.code.findbugs.version>
-		<com.google.code.maven-license-plugin.version>1.4.0</com.google.code.maven-license-plugin.version>
-		<encoding>UTF-8</encoding>
-		<java-version>1.8</java-version>
-		<spring.spring-web.version>4.3.2.gl.beta</spring.spring-web.version>
-	</properties>
+		<!-- == CXF == -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxws</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<!-- Jetty is needed if you're are not using the CXFServlet -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-transports-http-jetty</artifactId>
+			<version>${cxf.version}</version>
+		</dependency>
+		<!-- == End CXF == -->
 
+	</dependencies>
+	
 	<profiles>
 		<profile>
 			<id>packageAll</id>
