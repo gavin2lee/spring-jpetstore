@@ -9,7 +9,7 @@
     <appender name="ROLLING"
         class="ch.qos.logback.core.rolling.RollingFileAppender">
         <Encoding>UTF-8</Encoding>
-        <File>Dev/logs/jpetstore/spring-jpetstore.log</File>
+        <File>logs/jpetstore/spring-jpetstore.log</File>
         <rollingPolicy
             class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <FileNamePattern>log/spring-petstore-%d{yyyyMMdd}.log

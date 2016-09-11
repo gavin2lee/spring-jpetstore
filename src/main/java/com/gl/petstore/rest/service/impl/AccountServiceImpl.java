@@ -19,13 +19,23 @@ import com.gl.petstore.rest.service.AccountService;
 
 import ik.am.jpetstore.domain.model.Account;
 
-@Path("/account-service/")
-@Produces("text/xml")
-public class AccountServiceImpl implements AccountService {
-	Map<String, Account> accounts = new HashMap<String, Account>();
 
-	@GET
-	@Path("/accounts")
+public class AccountServiceImpl implements AccountService {
+	private Map<String, Account> accounts = new HashMap<String, Account>();
+	
+	public AccountServiceImpl(){
+		init();
+	}
+	
+	private void init(){
+		Account admin = new Account();
+		admin.setUsername("admin");
+		admin.setPassword("admin");
+		
+		accounts.put("admin", admin);
+	}
+
+	
 	public List<Account> getAccounts() {
 		List<Account> accountObjs = new ArrayList<Account>();
 		accountObjs.addAll(accounts.values());
@@ -41,16 +51,14 @@ public class AccountServiceImpl implements AccountService {
 		return Collections.unmodifiableList(accountObjs);
 	}
 
-	@GET
-	@Path("/accounts/{username}/")
+	
 	public Account getAccountWithUsername(@PathParam("username") String username) {
 		Account account = accounts.get(username);
 		
 		return account;
 	}
 	
-	@POST
-	@Path("/accounts/")
+	
 	public Response addAccount(Account account){
 		String username = account.getUsername();
 		if(accounts.containsKey(username)){
@@ -61,8 +69,7 @@ public class AccountServiceImpl implements AccountService {
 		return Response.ok().build();
 	}
 	
-	@PUT
-	@Path("/accounts/")
+	
 	public Response updateAccount(Account account){
 		return null;
 	}
