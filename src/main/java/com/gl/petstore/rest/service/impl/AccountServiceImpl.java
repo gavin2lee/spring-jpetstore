@@ -48,11 +48,12 @@ public class AccountServiceImpl implements AccountService {
 			
 		});
 		
-		return Collections.unmodifiableList(accountObjs);
+//		return Collections.unmodifiableList(accountObjs);
+		return accountObjs;
 	}
 
 	
-	public Account getAccountWithUsername(@PathParam("username") String username) {
+	public Account getAccountWithUsername(String username) {
 		Account account = accounts.get(username);
 		
 		return account;
